@@ -10,6 +10,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/styles/app.css" />
+    <!--
+    JavaScript 추가하는 방법
+     1. <head> 태그의 <script> 코드 안에 직접 추가
+      - 단점: 스크립트가 길어질수록 HTML 파일도 길어짐 -> 웹사이트를 관리하기 어려움
+    <script>
+      alert('This works - between script tags!');
+    </script>
+
+    2. src 속성을 사용해 js파일을 import
+    <script src="assets/scripts/app.js"></script>
+    -->
   </head>
   <body>
     <header>
@@ -29,5 +40,11 @@
       <h2 id="current-calculation">0</h2>
       <h2>Result: <span id="current-result">0</span></h2>
     </section>
+
+    <!-- JavaScript는 순서가 중요하기 때문에 의존할 파일이 있다면 먼저 가져와야함 -->
+    <script src="assets/scripts/vendor.js"></script>
+
+    <!-- <body> 태그 마지막에 추가하면 페이지가 렌더링 된 이후 코드를 로드함 -->
+    <script src="assets/scripts/app.js"></script>
   </body>
 </html>
